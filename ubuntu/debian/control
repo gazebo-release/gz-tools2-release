@@ -1,4 +1,4 @@
-Source: ignition-tools2
+Source: gz-tools2
 Maintainer: Jose Luis Rivero <jrivero@osrfoundation.org>
 Section: science
 Priority: optional
@@ -10,12 +10,12 @@ Build-Depends: debhelper (>= 11),
                ruby,
                pkg-config
 XS-Ruby-Versions: all
-Vcs-Browser: https://github.com/ignitionrobotics/ignition-tools2
-Vcs-Git: https://github.com/ignitionrobotics/ignition-tools2.git
+Vcs-Browser: https://github.com/gazebosim/gz-tools2
+Vcs-Git: https://github.com/gazebosim/gz-tools2.git
 Standards-Version: 4.5.1
-Homepage: http://ignitionrobotics.org/
+Homepage: http://gazebosim.org/
 
-Package: ignition-tools2
+Package: gz-tools2
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
@@ -25,25 +25,41 @@ Depends: ruby | ruby-interpreter,
 Breaks: ignition-tools
 Replaces: ignition-tools
 Multi-Arch: same
-Description: Entry point for using all the suite of ignition tools - app
- Ignition tools provide the ign command line tool that accepts multiple
+Description: Entry point for using all the suite of gz tools - app
+ Gazebo tools provide the ign command line tool that accepts multiple
  subcommands. Each subcommand is implemented in a plugin that belongs to a
- specific Ignition project.
+ specific Gazebo project.
  .
  Package contains the ign app
 
-Package: libignition-tools2-dev
+Package: libgz-tools2-dev
 Architecture: any
 Section: libdevel
 Depends: cmake,
-         ignition-tools2,
+         gz-tools2,
          ${misc:Depends}
 Breaks: libignition-tools-dev
 Replaces: libignition-tools-dev
 Multi-Arch: same
-Description: Entry point for using all the suite of ignition tools - cmake support
- Ignition tools provide the ign command line tool that accepts multiple
+Description: Entry point for using all the suite of gz tools - cmake support
+ Gazebo tools provide the ign command line tool that accepts multiple
  subcommands. Each subcommand is implemented in a plugin that belongs to a
- specific Ignition project.
+ specific Gazebo project.
  .
  Package contains the cmake helpers
+
+Package: ignition-tools2
+Depends: gz-tools2, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: libignition-tools2-dev
+Depends: libgz-tools2-dev, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.

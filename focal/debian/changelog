@@ -1,3 +1,9 @@
+gz-tools2 (1.999.999-2~focal) focal; urgency=medium
+
+  * Change package source name
+
+ -- Jose Luis Rivero <jrivero@osrfoundation.org>  Wed, 18 May 2022 00:15:38 +0200
+
 ignition-tools2 (1.999.999-1~focal) focal; urgency=medium
 
   * Stub to be removed after first entry
