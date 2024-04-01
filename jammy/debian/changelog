@@ -1,8 +1,14 @@
-gz-tools2 (2.0.0-2~jammy) jammy; urgency=medium
+gz-tools2 (2.0.1-2~jammy) jammy; urgency=medium
 
-  * gz-tools2 2.0.0-2 release
+  * gz-tools2 2.0.1-2 release
 
  -- Jose Luis Rivero <jrivero@osrfoundation.org>  Tue, 26 Mar 2024 18:59:11 +0100
+
+gz-tools2 (2.0.1-1~jammy) jammy; urgency=medium
+
+  * gz-tools2 2.0.1-1 release
+
+ -- Addisu Z. Taddese <addisu@openrobotics.org>  Thu, 28 Mar 2024 16:50:57 -0500
 
 gz-tools2 (2.0.0-1~jammy) jammy; urgency=medium
 
