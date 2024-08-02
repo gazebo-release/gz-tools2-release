@@ -4,6 +4,7 @@ Section: science
 Priority: optional
 Build-Depends: debhelper (>= 11),
                cmake,
+               doxygen,
                gem2deb,
                libbackward-cpp-dev,
 # The packages upports gz-cmake3 (Garden/Harmonic) and gz-cmake4 (Ionic)
