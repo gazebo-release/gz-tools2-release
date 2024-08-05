@@ -22,7 +22,8 @@ Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 XB-Ruby-Versions: ${ruby:Versions}
-Depends: ruby | ruby-interpreter,
+Depends: ruby:any,
+         ${shlibs:Depends},
          ${misc:Depends}
 Conflicts: gazebo (>= 11.0.0),
            gazebo (<= 11.14.0),
