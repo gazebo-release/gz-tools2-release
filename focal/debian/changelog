@@ -1,3 +1,9 @@
+gz-tools2 (2.0.2-1~focal) focal; urgency=medium
+
+  * gz-tools2 2.0.2-1 release
+
+ -- Addisu Z. Taddese <addisu@openrobotics.org>  Tue, 04 Feb 2025 17:03:33 -0600
+
 gz-tools2 (2.0.1-2~focal) focal; urgency=medium
 
   * gz-tools2 2.0.1-2 release
