@@ -72,3 +72,11 @@ Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
+
+Package: gz-jetty-tools
+Depends: gz-tools2 (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: metapackages
+Description: alias package
+ Provides a package for Jetty without exposing the version number.

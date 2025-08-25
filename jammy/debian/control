@@ -1,1 +1,74 @@
-../../ubuntu/debian/control
+Source: gz-tools2
+Maintainer: Jose Luis Rivero <jrivero@osrfoundation.org>
+Section: science
+Priority: optional
+Build-Depends: debhelper (>= 11),
+               cmake,
+               doxygen,
+               gem2deb,
+               libbackward-cpp-dev,
+# The packages upports gz-cmake3 (Garden/Harmonic) and gz-cmake4 (Ionic)
+               libgz-cmake3-dev | libgz-cmake4-dev,
+               pkg-config,
+               ruby
+XS-Ruby-Versions: all
+Vcs-Browser: https://github.com/gazebosim/gz-tools2
+Vcs-Git: https://github.com/gazebosim/gz-tools2.git
+Standards-Version: 4.5.1
+Homepage: http://gazebosim.org/
+
+Package: gz-tools2
+Architecture: any
+Section: libs
+Pre-Depends: ${misc:Pre-Depends}
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby:any,
+         ${shlibs:Depends},
+         ${misc:Depends}
+Conflicts: gazebo (>= 11.0.0),
+           gazebo (<= 11.14.0),
+           gazebo11 (<= 11.14.0)
+Breaks: ignition-tools2 (<< 1.999.999+nightly+git20220630+1r4051562399e3f34a3b41f601839247f071f80319-1),
+        gazebo11-gz-cli
+Replaces: ignition-tools2 (<< 1.999.999+nightly+git20220630+1r4051562399e3f34a3b41f601839247f071f80319-1),
+        gazebo11-gz-cli
+Multi-Arch: same
+Description: Entry point for using all the suite of Gazebo tools - app
+ Gazebo tools provide the gz command line tool that accepts multiple
+ subcommands. Each subcommand is implemented in a plugin that belongs to a
+ specific Gazebo project.
+ .
+ Package contains the gz app
+
+Package: libgz-tools2-dev
+Architecture: any
+Section: libdevel
+Depends: cmake,
+         gz-tools2,
+         libgz-cmake3-dev | libgz-cmake4-dev,
+         ${misc:Depends}
+Breaks: libignition-tools2-dev (<< 1.999.999+nightly+git20220630+1r4051562399e3f34a3b41f601839247f071f80319-1)
+Replaces: libignition-tools2-dev (<< 1.999.999+nightly+git20220630+1r4051562399e3f34a3b41f601839247f071f80319-1)
+Multi-Arch: same
+Description: Entry point for using all the suite of Gazebo tools - cmake support
+ Gazebo tools provide the gz command line tool that accepts multiple
+ subcommands. Each subcommand is implemented in a plugin that belongs to a
+ specific Gazebo project.
+ .
+ Package contains the cmake helpers
+
+Package: ignition-tools2
+Depends: gz-tools2, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: libignition-tools2-dev
+Depends: libgz-tools2-dev, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
